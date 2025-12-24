@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #0c0c0c;
+  --text-color: #f0f0f0;
+  --fill-color:#fdfdfc;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 48px;
+
+  --bd-color:#333333;
+
+
+  --bd-radius-xs:4px;
+  --bd-radius-sm:8px;
+  --bd-radius-md:12px;
+  --bd-radius-lg:16px;
+  --bd-radius-xl:20px;
+  --bd-radius-2xl:24px;
+  --bd-radius-3xl:28px;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: cursive;
+}
+
+main{
+    height: 100%;
+  width: 100%;
+}
+section{
+    height: 100%;
+  width: 100%;
+  padding: var(--space-2xl);
+  flex-direction: column;
+  display: flex;
+  gap: var(--space-lg);
+ 
+}
+section .infos{
+     display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+.info{
+    padding:var(--space-sm) var(--space-md) ;
+    border: 1px solid var(--bd-color);
+    border-radius: var(--bd-radius-sm);
+}
+
+.board{
+    border: 1px solid var(--bd-color);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(30px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(30px,1fr));
+}
+
+.block{
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--bd-color) ;
+    border-radius: 50%;
+}
+.fill{
+    background-color: var(--fill-color);
+}
+
+.food{
+  background-color: red;
+}
+.btn{
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--bd-radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover{
+  transform: scale(1.1);
+}
+.desc{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: #333333;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start_game,.game_over{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.game_over{
+  display: none;
+}
